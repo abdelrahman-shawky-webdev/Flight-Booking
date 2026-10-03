@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Flight Booking</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <h1 class="logo">EgyptAir</h1>
+        <ul>
+            <li><a href="#">Flights</a></li>
+            <li><a href="#">Hotels</a></li>
+            <li><a href="#">Car Rental</a></li>
+            <li><a href="#">Offers</a></li>
+        </ul>
+        <button class="btn">SIGN IN <i class="fa-solid fa-right-to-bracket"></i></button>
+    </div>
+    
+    <div class="hero-section">
+    <div class="search-card">
+        <h2>Where to Next?</h2>
+    <div class="trip-type">
+      <input type="radio" id="round-trip" name="trip" checked>
+      <label for="round-trip">Round Trip</label>
+
+      <input type="radio" id="one-way" name="trip">
+      <label for="one-way">One Way</label>
+    </div>
+    <div class="search-inputs">
+      
+      <!-- From -->
+      <div class="input-group">
+        <label for="from-city">From</label>
+        <input type="text" id="from-city" placeholder="City or Airport">
+      </div>
+
+      <!-- To -->
+      <div class="input-group">
+        <label for="to-city">To</label>
+        <input type="text" id="to-city" placeholder="City or Airport">
+      </div>
+
+      <div class="input-group">
+        <label for="dep-date">Departure</label>
+        <input type="date" id="dep-date">
+      </div>
+
+      <div class="input-group">
+        <label for="return-date">Return</label>
+        <input type="date" id="return-date">
+      </div>
+      <div class="input-group">
+        <label for="passengers">Passengers</label>
+        <input type="number" id="passengers" min="1" max="15" value="1">
+      </div>
+      <div class="input-group">
+        <label for="flight-class">Class</label>
+        <select id="flight-class">
+            <option value="ec">Economy</option>
+            <option value="pr">Premium</option>
+            <option value="bu">Business</option>
+            <option value="fi">First Class</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="search-btn-wrapper">
+      <button type="button" class="search-btn">Search Flights</button>
+    </div>
+
+   </div>
+  </div>
+  <section class="results-container">
+    <aside class="sidebar">
+      <h2>Flight Information</h2>
+      <div class="price-range">
+        <h3>Trip Price</h3>
+        <label for="trip-price">Max Price: $1000</label>
+        <input type="range" id="trip-price" min="250" max="1000">
+        <div class="price-labels">
+          <span>$250</span>
+          <span>$1000</span>
+        </div>
+      </div>
+      <div class="transit-group">
+       <h3>Transit Options</h3>
+      <div class="transit-options">
+      <input type="radio" id="direct" checked name="transit">
+      <label for="direct">Direct / Non-stop</label>
+      </div>
+      <div class="transit-options">
+      <input type="radio" id="1-stop" name="transit">
+      <label for="1-stop">1 Stop</label>
+      </div>
+      <div class="transit-options">
+      <input type="radio" id="2-stop" name="transit">
+      <label for="2-stop">2+ Stop</label>
+      </div>
+      </div>
+      <div class="airline">
+        <h3>Choose an AirLine</h3>
+        <label for="air-lines">AirLine</label>
+        <select id="air-lines">
+          <option value="EG">EgyptAir</option>
+          <option value="EM">Emirates</option>
+          <option value="QA">Qatar Airways</option>
+          <option value="EA">Etihad Airways</option>
+          <option value="TA">Turkish Airlines</option>
+          <option value="AF">Air France</option>
+          <option value="SA">Saudia</option>
+          <option value="BA">British Airways</option>
+        </select>
+      </div>
+      <button type="button" class="btn-1">Apply Filters</button>
+    </aside>
+    <div class="flights-section">
+      <h2>Flights</h2>
+      <span>Sort by:</span>
+      <div class="sort-box">
+        <div class="sort-options">
+        <input type="radio" id="sort-cheapest" name="sort-by" checked>
+        <label for="sort-cheapest">Cheapest</label>
+      </div>
+      <div class="sort-options">
+        <input type="radio" id="sort-fastest" name="sort-by">
+        <label for="sort-fastest">Fastest</label>
+      </div>
+      <div class="sort-options">
+        <input type="radio" id="sort-best" name="sort-by">
+        <label for="sort-best">Best</label>
+      </div>
+      </div>
+      <div class="flights-list">
+        <div class="flight-box">
+        <div class="card-header">
+          <h4>EgyptAir</h4>
+        </div>
+        <div class="card-body">
+          <div class="departure-info">
+            <span class="time">Departure 08:00AM</span>
+            <span class="airport">Airport: CAI</span>
+          </div>
+          <div class="flight-duration">
+            <span class="duration">Duration 5h 30m</span>
+            <span class="stops">Trip Type: Direct</span>
+          </div>
+          <div class="arrival-info">
+            <span class="time">Arrival 01:30 PM</span>
+            <span class="airport">Airport: DXB</span>
+          </div>
+          <div class="card-footer">
+            <span class="price">Price: $450</span>
+            <button type="button" class="select-btn">Select Flight</button>
+          </div>
+        </div>
+      </div>
+      <div class="flight-box">
+        <div class="card-header">
+          <h4>Emirates</h4>
+        </div>
+        <div class="card-body">
+          <div class="departure-info">
+            <span class="time">Departure 011:00AM</span>
+            <span class="airport">Airport: CAI</span>
+          </div>
+          <div class="flight-duration">
+            <span class="duration">Duration 3h 30m</span>
+            <span class="stops">Trip Type: Direct</span>
+          </div>
+          <div class="arrival-info">
+            <span class="time">Arrival 02:30 PM</span>
+            <span class="airport">Airport: DXB</span>
+          </div>
+          <div class="card-footer">
+            <span class="price">Price: $630</span>
+            <button type="button" class="select-btn">Select Flight</button>
+          </div>
+        </div>
+      </div>
+      <div class="flight-box">
+        <div class="card-header">
+          <h4>Qatar Airways</h4>
+        </div>
+        <div class="card-body">
+          <div class="departure-info">
+            <span class="time">Departure 06:00AM</span>
+            <span class="airport">Airport: CAI</span>
+          </div>
+          <div class="flight-duration">
+            <span class="duration">Duration 2h 30m</span>
+            <span class="stops">Trip Type: Direct</span>
+          </div>
+          <div class="arrival-info">
+            <span class="time">Arrival 09:30 PM</span>
+            <span class="airport">Airport: DOH</span>
+          </div>
+          <div class="card-footer">
+            <span class="price">Price: $800</span>
+            <button type="button" class="select-btn">Select Flight</button>
+          </div>
+        </div>
+      </div>
+      <div class="flight-box">
+        <div class="card-header">
+          <h4>Saudia</h4>
+        </div>
+        <div class="card-body">
+          <div class="departure-info">
+            <span class="time">Departure 11:00AM</span>
+            <span class="airport">Airport: CAI</span>
+          </div>
+          <div class="flight-duration">
+            <span class="duration">Duration 1h 30m</span>
+            <span class="stops">Trip Type: Direct</span>
+          </div>
+          <div class="arrival-info">
+            <span class="time">Arrival 01:30 PM</span>
+            <span class="airport">Airport: SAD</span>
+          </div>
+          <div class="card-footer">
+            <span class="price">Price: $500</span>
+            <button type="button" class="select-btn">Select Flight</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
